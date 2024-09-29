@@ -6,7 +6,7 @@
     "passthrough": false,
     "gtk-layer-shell": true,
     "height": 30,
-    "modules-left": ["clock","custom/currentworkspace", "hyprland/workspaces"],
+    "modules-left": ["clock", "hyprland/workspaces", "cpu"],
     "modules-center": ["hyprland/window"],
     "modules-right": ["temperature", "network", "pulseaudio","pulseaudio#microphone","tray", "custom/exit"],
     "hyprland/window": {
@@ -20,11 +20,19 @@
 		]
 	},
 
-//	"custom/currentworkspace": {
-//		"format": "workspace: {id}",
-//		"tooltip": "current workspace",
-//		"source": "hyprland/workspaces"
-//	},
+	"cpu": {
+		"format": "{icon0} {icon1} {icon2} {icon3} {icon4} {icon5} {icon6} {icon7}",
+		"format-icons": [
+          "<span color='#69ff94'>▁</span>", // green
+          "<span color='#2aa9ff'>▂</span>", // blue
+          "<span color='#f8f8f2'>▃</span>", // white
+          "<span color='#f8f8f2'>▄</span>", // white
+          "<span color='#ffffa5'>▅</span>", // yellow
+          "<span color='#ffffa5'>▆</span>", // yellow
+          "<span color='#ff9977'>▇</span>", // orange
+          "<span color='#dd532e'>█</span>"  // red
+		]
+	},
 
     "hyprland/workspaces": {
         "active-only": false,
