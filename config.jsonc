@@ -35,17 +35,23 @@
 	},
 
     "hyprland/workspaces": {
+		"persistent-workspaces": {
+			"HDMI-A-1": [ 1, 2, 3, 4 ],
+			"DP-2": [ 1, 2, 3, 4, ],
+		},
         "active-only": false,
         "on-click": "activate",
         "all-outputs": true,
 		"format": "{icon}",
 		"format-icons": {
 			"active": " ",
-			"urgant": " ",
+			"urgant": " ",
+			"empty": " ",
 			"focused": " ",
 			"default":"[]",
-		"window-rewrite-default": " "
-		}
+			"persistent": "[]"
+		},
+		"class<kitty>": " ",
     },
 
     "tray": {
