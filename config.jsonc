@@ -6,9 +6,9 @@
     "passthrough": false,
     "gtk-layer-shell": true,
     "height": 30,
-    "modules-left": ["clock", "hyprland/workspaces", "cpu"],
+    "modules-left": ["clock", "hyprland/workspaces"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["temperature", "network", "pulseaudio","pulseaudio#microphone","tray", "custom/exit"],
+    "modules-right": ["cpu", "temperature", "network", "pulseaudio","pulseaudio#microphone","tray", "custom/exit"],
     "hyprland/window": {
         "format": "{}"
     },
@@ -35,23 +35,37 @@
 	},
 
     "hyprland/workspaces": {
-		"persistent-workspaces": {
-			"HDMI-A-1": [ 1, 2, 3, 4 ],
-			"DP-2": [ 1, 2, 3, 4, ],
-		},
+	"persistent-workspaces": {
+		"HDMI-A-1": [ 1, 2, 3, 4 ],
+		"DP-2": [ 1, 2, 3, 4, ],
+	},
         "active-only": false,
         "on-click": "activate",
         "all-outputs": true,
-		"format": "{icon}",
-		"format-icons": {
-			"active": " ",
-			"urgant": " ",
-			"empty": " ",
-			"focused": " ",
-			"default":"[]",
-			"persistent": "[]"
-		},
-		"class<kitty>": " ",
+	"format": "{icon}{windows} ",
+	"format-icons": {
+		"active": " ",
+		"urgant": " ",
+		"empty": "",
+		"focused": " ",
+		"default":"[]",
+		"persistent": "[]",
+	},
+		
+	"window-rewrite-default": "",
+	"window-rewrite": {
+		"class<zen-alpha>": "",
+		"class<kitty>": "",
+		"class<steam>": "󰓓",
+		"class<Signal>": "",
+		"class<thunar>": "",
+		"title<.*youtube.*>": "",
+		"title<.*nvim.*>": "", //   just an alternate neovim icon 
+		"title<.*github.*>": "",// other git icons
+		"title<.*mail.*>": "",
+		"title<.*pacman.*>": "",
+		
+	},
     },
 
     "tray": {
@@ -99,7 +113,7 @@
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "  {signalStrength}%",
-        "format-ethernet": "{ipaddr}/{cidr}",
+        "format-ethernet": "{ipaddr}/{cidr} 󰈀",
         "tooltip-format": "{essid} - {ifname} via {gwaddr}",
         "format-linked": "{ifname} (No IP)",
         "format-disconnected": "Disconnected ⚠",
