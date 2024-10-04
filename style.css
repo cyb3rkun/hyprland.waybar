@@ -24,14 +24,12 @@ tooltip {
 #workspaces button {
 	color: #78a3e2;
 	padding: 0px;
-	margin-right: 2px;
 }
 
 #workspaces button.empty {
 	margin: 0px;
 	padding: 0px;
 	color: #ffbb00;
-	margin-right: 2px;
 }
 
 #workspaces button.active {
@@ -39,10 +37,8 @@ tooltip {
 }
 
 #workspaces button.focused {
-	padding-right: 0px;
     color: #a6aCCC;
     background: #eba0ac;
-	margin-right: 2px;
 }
 
 #workspaces button.urgent {
@@ -51,18 +47,13 @@ tooltip {
 }
 
 #workspaces button:hover {
-	padding-right: 0px;
 	background: #11111b;
 	color: #cdd6f4;
 	border-radius: 2px;
-	margin-right: 2px;
 }
 
 #workspaces button.persistent {
 	padding: 0px;
-	margin-right: 1px;
-	padding-right: 0px;
-	padding-right: 1px;
 }
 
 #custom-weather
@@ -113,7 +104,6 @@ tooltip {
 	background: rgba(0,0,0,0);
     border-radius: 20px;
     margin-left: 10px;
-	padding-right: 2px;
 	border-right: 2px;
 	border-left: 2px;
 	border-top: 0px;

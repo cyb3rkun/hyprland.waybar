@@ -49,7 +49,6 @@
 		"empty": "",
 		"focused": " ",
 		"default":"[]",
-		"persistent": "[]",
 	},
 		
 	"window-rewrite-default": "",
@@ -57,11 +56,11 @@
 		"class<zen-alpha>": "",
 		"class<kitty>": "",
 		"class<steam>": "󰓓",
-		"class<Signal>": "",
+		"class<Signal>": "󰏲",
 		"class<thunar>": "",
 		"title<.*youtube.*>": "",
+		"title<.*github.*>": "",// other git icons
 		"title<.*nvim.*>": "", //   just an alternate neovim icon 
-		"title<.*github.*>": "",// other git icons
 		"title<.*mail.*>": "",
 		"title<.*pacman.*>": "",
 		
