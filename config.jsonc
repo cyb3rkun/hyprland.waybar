@@ -1,17 +1,17 @@
 {
-    "layer": "top",
-    "position": "top",
-    "mod": "dock",
-    "exclusive": true,
-    "passthrough": false,
-    "gtk-layer-shell": true,
-    "height": 30,
-    "modules-left": ["clock", "hyprland/workspaces"],
-    "modules-center": ["hyprland/window"],
-    "modules-right": ["cpu", "temperature", "network", "pulseaudio","pulseaudio#microphone","tray", "custom/exit"],
-    "hyprland/window": {
-        "format": "{}"
-    },
+	"layer": "top",
+	"position": "top",
+	"mod": "dock",
+	"exclusive": true,
+	"passthrough": false,
+	"gtk-layer-shell": true,
+	"height": 30,
+	"modules-left": ["clock", "hyprland/workspaces"],
+	"modules-center": ["hyprland/window"],
+	"modules-right": ["cpu", "temperature", "network", "pulseaudio","pulseaudio#microphone","tray", "custom/exit"],
+	"hyprland/window": {
+		"format": "{}"
+	},
 	"clock": {
 		"interval": 60,
 		"format": "{:%y-%m-%d\/%H:%M}",
@@ -23,14 +23,14 @@
 	"cpu": {
 		"format": "{icon0} {icon1} {icon2} {icon3} {icon4} {icon5} {icon6} {icon7}",
 		"format-icons": [
-          "<span color='#69ff94'>▁</span>", // green
-          "<span color='#2aa9ff'>▂</span>", // blue
-          "<span color='#f8f8f2'>▃</span>", // white
-          "<span color='#f8f8f2'>▄</span>", // white
-          "<span color='#ffffa5'>▅</span>", // yellow
-          "<span color='#ffffa5'>▆</span>", // yellow
-          "<span color='#ff9977'>▇</span>", // orange
-          "<span color='#dd532e'>█</span>"  // red
+			"<span color='#69ff94'>▁</span>", // green
+			"<span color='#2aa9ff'>▂</span>", // blue
+			"<span color='#f8f8f2'>▃</span>", // white
+			"<span color='#f8f8f2'>▄</span>", // white
+			"<span color='#ffffa5'>▅</span>", // yellow
+			"<span color='#ffffa5'>▆</span>", // yellow
+			"<span color='#ff9977'>▇</span>", // orange
+			"<span color='#dd532e'>█</span>"  // red
 		]
 	},
 
@@ -39,9 +39,9 @@
 		"HDMI-A-1": [ 1, 2, 3, 4 ],
 		"DP-2": [ 1, 2, 3, 4, ],
 	},
-        "active-only": false,
-        "on-click": "activate",
-        "all-outputs": true,
+	"active-only": false,
+	"on-click": "activate",
+	"all-outputs": true,
 	"format": "{icon}{windows} ",
 	"format-icons": {
 		"active": " ",
@@ -65,59 +65,59 @@
 		"title<.*pacman.*>": "",
 		
 	},
-    },
+	},
 
-    "tray": {
-        "icon-size": 18,
-        "spacing": 10
-    },
+	"tray": {
+		"icon-size": 18,
+		"spacing": 10
+	},
 
-    "pulseaudio": {
-        "format": "{icon} {volume}%",
-        "tooltip": false,
-        "format-muted": " Muted",
-        "on-click": "pamixer -t",
-        "on-scroll-up": "pamixer -i 5",
-        "on-scroll-down": "pamixer -d 5",
-        "scroll-step": 5,
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        }
-    },
+	"pulseaudio": {
+		"format": "{icon} {volume}%",
+		"tooltip": false,
+		"format-muted": " Muted",
+		"on-click": "pamixer -t",
+		"on-scroll-up": "pamixer -i 5",
+		"on-scroll-down": "pamixer -d 5",
+		"scroll-step": 5,
+		"format-icons": {
+			"headphone": "",
+			"hands-free": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": ["", "", ""]
+		}
+	},
 
-    "pulseaudio#microphone": {
-        "format": "{format_source}",
-        "format-source": " {volume}%",
-        "format-source-muted": " Muted",
-        "on-click": "pamixer --default-source -t",
-        "on-scroll-up": "pamixer --default-source -i 5",
-        "on-scroll-down": "pamixer --default-source -d 5",
-        "scroll-step": 5
-    },
-    
-    "temperature": {
+	"pulseaudio#microphone": {
+		"format": "{format_source}",
+		"format-source": " {volume}%",
+		"format-source-muted": " Muted",
+		"on-click": "pamixer --default-source -t",
+		"on-scroll-up": "pamixer --default-source -i 5",
+		"on-scroll-down": "pamixer --default-source -d 5",
+		"scroll-step": 5
+	},
+
+	"temperature": {
 		"hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        //"thermal-zone": 9,
-        "format": "{temperatureC}°C ",
-        "critical-threshold": 80,
-        "format-critical": "{temperatureC}°C "
-    },
+		//"thermal-zone": 9,
+		"format": "{temperatureC}°C ",
+		"critical-threshold": 80,
+		"format-critical": "{temperatureC}°C "
+	},
 
-    "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "  {signalStrength}%",
-        "format-ethernet": "{ipaddr}/{cidr} 󰈀",
-        "tooltip-format": "{essid} - {ifname} via {gwaddr}",
-        "format-linked": "{ifname} (No IP)",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}:{essid} {ipaddr}/{cidr}"
-    },
+	"network": {
+		// "interface": "wlp2*", // (Optional) To force the use of this interface
+		"format-wifi": "  {signalStrength}%",
+		"format-ethernet": "{ipaddr}/{cidr} 󰈀",
+		"tooltip-format": "{essid} - {ifname} via {gwaddr}",
+		"format-linked": "{ifname} (No IP)",
+		"format-disconnected": "Disconnected ⚠",
+		"format-alt": "{ifname}:{essid} {ipaddr}/{cidr}"
+	},
 	"custom/exit": {
 		"format": "  ",
 		"on-click": "wlogout",
